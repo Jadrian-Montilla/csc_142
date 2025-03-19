@@ -154,22 +154,27 @@ Your task 2:
 #include "Book.h"
 
 int main(){
-    Book person1 = Book("013478796X", "Tony Gaddis", 
+    Book book1 = Book("013478796X", "Tony Gaddis", 
                 "Starting Out With Java: From Control Structures through Data Structures", 
                 4, "PE", 118.30);
-    Book person2 = Book("0321409493", "John Lewis", 
+    Book book2 = Book("0321409493", "John Lewis", 
                 "Java Software Solutions: Foundations of Program Design", 
                 5, "AW", 94.05);
-    Book person3 = Book("0134743350", "Harvey Deitel", "Java How to Program, Early Objects",
+    Book book3 = Book("0134743350", "Harvey Deitel", "Java How to Program, Early Objects",
                 12, "PE", 134.84);
 
-    printf("\n%-13.13s  %.13s    %.39s  %3d  %3s  %10.2f", person1.getISBN().c_str(), person1.getAuthor().c_str(), person1.getTitle().c_str(), person1.getEdition(), person1.getPubCode().c_str(), person1.getPrice());
-    printf("\n%-13.13s  %.13s     %.39s  %3d  %3s  %10.2f", person2.getISBN().c_str(), person2.getAuthor().c_str(), person2.getTitle().c_str(), person2.getEdition(), person2.getPubCode().c_str(), person2.getPrice());
-    printf("\n%-13.13s  %.13s  %.39s       %3d  %3s  %10.2f", person3.getISBN().c_str(), person3.getAuthor().c_str(), person3.getTitle().c_str(), person3.getEdition(), person3.getPubCode().c_str(), person3.getPrice());
-    person1.changePrice(145.68);
-    person2.changePrice(117.79);
-    person3.changePrice(59.99);
-    printf("\n\n%-13.13s  %.13s    %.39s  %3d  %3s  %10.2f", person1.getISBN().c_str(), person1.getAuthor().c_str(), person1.getTitle().c_str(), person1.getEdition(), person1.getPubCode().c_str(), person1.getPrice());
-    printf("\n%-13.13s  %.13s     %.39s  %3d  %3s  %10.2f", person2.getISBN().c_str(), person2.getAuthor().c_str(), person2.getTitle().c_str(), person2.getEdition(), person2.getPubCode().c_str(), person2.getPrice());
-    printf("\n%-13.13s  %.13s  %.39s       %3d  %3s  %10.2f", person3.getISBN().c_str(), person3.getAuthor().c_str(), person3.getTitle().c_str(), person3.getEdition(), person3.getPubCode().c_str(), person3.getPrice());
+    printf("\n%-15s  %-16s  %-37.37s  %2d  %3s  $%7.2f\n", book1.getISBN().c_str(), book1.getAuthor().c_str(), book1.getTitle().c_str(), book1.getEdition(), book1.getPubCode().c_str(), book1.getPrice());
+    printf("%-15s  %-16s  %-37.37s  %2d  %3s  $%7.2f\n", book2.getISBN().c_str(), book2.getAuthor().c_str(), book2.getTitle().c_str(), book2.getEdition(), book2.getPubCode().c_str(), book2.getPrice());
+    printf("%-15s  %-16s  %-37.37s  %2d  %3s  $%7.2f\n", book3.getISBN().c_str(), book3.getAuthor().c_str(), book3.getTitle().c_str(), book3.getEdition(), book3.getPubCode().c_str(), book3.getPrice());
+
+    book1.changePrice(145.68);
+    book2.changePrice(117.79);
+    book3.changePrice(59.99);
+
+    printf("\n%-15s  %-16s  %-37.37s  %2d  %3s  $%7.2f\n", book1.getISBN().c_str(), book1.getAuthor().c_str(), book1.getTitle().c_str(), book1.getEdition(), book1.getPubCode().c_str(), book1.getPrice());
+    printf("%-15s  %-16s  %-37.37s  %2d  %3s  $%7.2f\n", book2.getISBN().c_str(), book2.getAuthor().c_str(), book2.getTitle().c_str(), book2.getEdition(), book2.getPubCode().c_str(), book2.getPrice());
+    printf("%-15s  %-16s  %-37.37s  %2d  %3s  $%7.2f\n", book3.getISBN().c_str(), book3.getAuthor().c_str(), book3.getTitle().c_str(), book3.getEdition(), book3.getPubCode().c_str(), book3.getPrice());
+    
+    return 0;
+
 }
